@@ -36,7 +36,7 @@
             line-height: 1.7;
         }
 
-        /* Семантический Header в стиле минимализма */
+        /* Навигация */
         .site-header {
             display: flex;
             justify-content: space-between;
@@ -132,10 +132,10 @@
 
         /* Сетка "4 Дыры в маркетинге" */
         .section-title {
-            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
             font-weight: 900;
             letter-spacing: -0.02em;
-            margin: 4rem 0 2rem;
+            margin: 5rem 0 2rem;
         }
 
         .grid-holes {
@@ -222,6 +222,65 @@
             display: inline-block;
             margin-bottom: 1.5rem;
             letter-spacing: 0.08em;
+        }
+
+        /* НОВЫЙ БЛОК: Отзывы клиентов */
+        .reviews-section {
+            margin: 5rem 0;
+        }
+
+        .reviews-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .review-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .review-user {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            border: 2px solid var(--text-dark);
+        }
+
+        .review-meta h4 {
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: var(--text-dark);
+        }
+
+        .review-meta p {
+            font-size: 0.85rem;
+            color: var(--accent-orange);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0;
+        }
+
+        .review-text {
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-bottom: 0;
         }
 
         /* Секция автора (Двухколоночный Grid) */
@@ -343,6 +402,7 @@
 
         .cta-box h2 {
             margin-bottom: 2.5rem;
+            font-weight: 900;
         }
 
         .btn-massive {
@@ -395,6 +455,7 @@
             .tag-4 { right: 2%; bottom: -2%; }
             .case-container { padding: 2.5rem 1.5rem; }
             .hole-card { padding: 2rem 1.5rem; }
+            .review-card { padding: 1.8rem 1.2rem; }
             .btn-massive { width: 100%; padding: 1.4rem 1rem; font-size: 1.1rem; }
             .cta-box { padding: 3rem 1.2rem; }
         }
@@ -404,7 +465,7 @@
 
     <header class="site-header">
         <a href="#" class="logo">Аналитика <span>Строительства</span></a>
-        <a href="https://t.me/ТВОЙ_ТЕЛЕГРАМ" class="btn-header" target="_blank">Разбор профиля</a>
+        <a href="https://wa.me/79083317369" class="btn-header" target="_blank">Разбор в WhatsApp</a>
     </header>
 
     <main class="main-container">
@@ -417,7 +478,7 @@
                 </div>
             </header>
 
-            <p>Чтобы навсеть освободиться от жесткой зависимости от случайных рекомендаций, вам необходимо системно перекрыть <strong>4 ключевых канала утечки ваших потенциальных клиентов:</strong></p>
+            <p>Чтобы навсегда освободиться от жесткой зависимости от случайных рекомендаций, вам необходимо системно перекрыть <strong>4 ключевых канала утечки ваших потенциальных клиентов:</strong></p>
 
             <div class="grid-holes">
                 <div class="hole-card">
@@ -429,7 +490,7 @@
                     <h3><span>02.</span> Автономный продающий сайт</h3>
                     <p>Попытки вести весь трафик в личные сообщения превращают вас в круглосуточного оператора, при этом до 50% клиентов уходят из-за долгого ответа. Индивидуальный сайт мгновенно отстраивает вас от "диких" бригад.</p>
                     <div class="tech-highlight">
-                        <p><strong>💎 Технологическое преимущество:</strong> Я разрабатываю такие сайты исключительно на чистом кодовой базе и размещаю на отказоустойчивых серверах GitHub. Вы платите только один раз за разработку. Никаких ежемесячных абонентских плат, как на Tilda (чистая экономия от 15 000 рублей в год). Хостинг абсолютно бесплатен навсегда. Ваши единственные расходы — около 200 рублей в год за доменное имя.</p>
+                        <p><strong>💎 Технологическое преимущество:</strong> Я разрабатываю такие сайты исключительно на чистой кодовой базе и размещаю на отказоустойчивых серверах GitHub. Вы платите только один раз за разработку. Никаких ежемесячных абонентских плат, как на Tilda (чистая экономия от 15 000 рублей в год). Хостинг абсолютно бесплатен навсегда. Ваши единственные расходы — около 200 рублей в год за доменное имя.</p>
                     </div>
                 </div>
 
@@ -454,6 +515,39 @@
                 <p>Большинство строителей совершают одинаковую ошибку на Авито — они пишут одинаковые, безликие тексты, конкурируя исключительно ценой и демпингуя в ноль.</p>
                 <p>Мы взяли аналогичный проект в строительном секторе, который несколько месяцев работал в минус на платных услугах продвижения, и полностью пересобрали его позиционирование.</p>
                 <p>Результат через 7 дней: <strong>43 горячих целевых обращения</strong>. Что было сделано? Полностью переписана структура смысловых блоков, объявления жестко сегментированы под конкретные боли аудитории (контроль сметы, сроки, качество материалов), а весь трафик был замкнут на высокотехнологичный быстрый сайт. Система окупилась в первые дни.</p>
+            </section>
+
+            <section class="reviews-section">
+                <h2 class="section-title">Что говорят руководители бригад и мастера</h2>
+                <div class="reviews-grid">
+                    
+                    <div class="review-card">
+                        <div class="review-user">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&h=120&q=80" alt="Артур М." class="review-avatar">
+                            <div class="review-meta">
+                                <h4>Артур Мнацаканян</h4>
+                                <p>Бригада «ПроРемонт», г. Казань</p>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            «Раньше сидели чисто на сарафане, в несезон зубы на полку клали. Рафаэль пересобрал нам Авито и запустил сайт на Гитхабе. Сначала не понял, почему без Тильды, но когда за хостинг платить не пришлось — оценил. За первую неделю получили 11 заявок на ремонт под ключ, 3 договора уже подписали. Система окупается моментально».
+                        </p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-user">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&h=120&q=80" alt="Игорь В." class="review-avatar">
+                            <div class="review-meta">
+                                <h4>Игорь Вавилов</h4>
+                                <p>Частный мастер (электрика и отделка), г. Москва</p>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            «Самая большая ценность — это ограничение на один город. Рафаэль сразу сказал, что моих конкурентов в Люберцах не возьмет. В итоге карты вывели меня в топ района, а быстрый сайт закрывает все вопросы по сметам. Больше не работаю автоответчиком в личке, люди приходят прогретые и готовые платить за качество, а не искать где дешевле».
+                        </p>
+                    </div>
+
+                </div>
             </section>
 
             <section class="author-section">
@@ -486,12 +580,11 @@
                 </div>
             </div>
 
-            <p>Если вы готовы зафиксировать за собой свой город и прекратить слив заявок — отправьте мне кодовое слово <strong>«ПОТОК»</strong> в личные сообщения в удобном для вас мессенджере.</p>
-            <p>Я проведу персональный экспресс-аудит вашей текущей ситуации и честно скажу, какой кратный рост мы сможем заложить в вашей нише. Напишите кодовое слово прямо сейчас.</p>
+            <p>Если вы готовы зафиксировать за собой свой город и прекратить слив заявок — отправьте мне кодовое слово <strong>«ПОТОК»</strong> прямо в WhatsApp. Нажмите на кнопку ниже, текст сообщения сформируется автоматически.</p>
 
             <div class="cta-box">
                 <h2>Забрать систему привлечения</h2>
-                <a href="https://t.me/ТВОЙ_ТЕЛЕГРАМ" class="btn-massive" target="_blank">Отправить слово «ПОТОК»</a>
+                <a href="https://wa.me/79083317369?text=%D0%9F%D0%9E%D0%A2%D0%9E%D0%9A" class="btn-massive" target="_blank">Написать «ПОТОК» в WhatsApp</a>
             </div>
         </article>
     </main>
